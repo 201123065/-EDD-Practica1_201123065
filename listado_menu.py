@@ -11,14 +11,22 @@ def main_menu():
 	print "2.-Ingresar al sistema"
 	print "3.-Salir"
 
-def addUser():
+def menu1_opcion2():
+	print " ------------------------------------ "
+	print "|  OPCION 2: INICIE SESION PORFAVOR  |"
+	print " ------------------------------------ "
+	print "ingrese el nombre del usuario:"
+
+def menu1_opcion1():
 	print " ------------------------------------ "
 	print "| OPCION 1: REGISTRAR NUEVO USUARIO  |"
 	print " ------------------------------------ "
 	print "ingrese el nombre:"
 
-
-def menu1_opcion2():
+def menu2(usuario):
+	print " ------------------------------------ "
+	print "       Bienvenido "+usuario+"        "
+	print " ------------------------------------ "
 	print "1. Leer archivo"
 	print "2. Resolver operaciones"
 	print "3. Operar la matriz"
@@ -27,8 +35,35 @@ def menu1_opcion2():
 	print "6. Cerrar sesión"
 
 
+def menu2_opcion1():
+	print " ------------------------------------ "
+	print "|     OPCION 1: LEER ARCHIVOS        |"
+	print " ------------------------------------ "
+	print "por favor ingrese la ruta del archivo:"
+
+
 def gracias():
 	print " ------------------------------------ "
 	print "|   OPCION 3: Gracias por utilizar   |"
 	print "|            el programa             |"
+	print " ------------------------------------ "
+
+def print_users():
+	print " ------------------------------------ "
+	print "|   Lista de usuarios registrados    |"
+	print " ------------------------------------ "
+
+def mistake():
+	print " ------------------------------------ "
+	print "|   ERROR,ESTA OPCION NO ES VALIDA   |"
+	print " ------------------------------------ "
+
+def Bienvenido():
+	print " ------------------------------------ "
+	print "|             BIENVENDIO             |"
+	print " ------------------------------------ "
+
+def close_session():
+	print " ------------------------------------ "
+	print "|         ***CERRO SESION***         |"
 	print " ------------------------------------ "
