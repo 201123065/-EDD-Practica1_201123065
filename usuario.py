@@ -32,16 +32,16 @@ class usuario():
 
 	def existe(self,usuario,passwd):
 		if self.inicio==None:
-			return False
+			return None
 		else:
 			tmp = self.inicio
 			if tmp.usuario==usuario and tmp.passwd==passwd:
-				return True
+				return tmp
 			while tmp.derecha!=self.inicio:
 				tmp=tmp.derecha
 				if tmp.usuario==usuario and tmp.passwd==passwd:
-					return True
-		return False
+					return tmp
+		return None
 
 	def imprime_usuarios(self):
 		temporal = self.inicio
@@ -58,6 +58,8 @@ class usuario():
 			der_a_izq=der_a_izq+"->"+temporal.usuario
 		der_a_izq=der_a_izq+"->"+temporal.izquierda.usuario
 		print izq_a_der +"\n"+der_a_izq
+
+
 
 
 

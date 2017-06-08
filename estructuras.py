@@ -5,6 +5,7 @@ import os
 
 from usuario import usuario
 from listado_menu import *
+from parseXML import parser
 
 usuario = usuario()
 
@@ -32,15 +33,17 @@ while valor:
 		passwd = raw_input()
 		menu_2=True
 		os.system("clear")
-		if usuario.existe(username,passwd):
+		sesion_usuario=usuario.existe(username,passwd)
+		if sesion_usuario!=None:
 			os.system("clear")
 			while menu_2==True:
-				menu=menu2(username)
+				menu=menu2(sesion_usuario.usuario)
 				opcion = raw_input()
 				os.system("clear")
 				if opcion=="1":
 					menu=menu2_opcion1()
 					ruta = raw_input()
+					sesion_usuario = parser(ruta,sesion_usuario)
 				elif opcion=="2":
 					print"dos"
 				elif opcion=="3":
