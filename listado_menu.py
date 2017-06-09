@@ -41,6 +41,12 @@ def menu2_opcion1():
 	print " ------------------------------------ "
 	print "por favor ingrese la ruta del archivo:"
 
+def menu2_opcion2():
+	print " ------------------------------------ "
+	print "|      OPCION 2: OPERAR COLA         |"
+	print " ------------------------------------ "
+	print"1. Operar siguiente"
+	print"2. Regresar"
 
 def gracias():
 	print " ------------------------------------ "
@@ -56,6 +62,9 @@ def print_users():
 def mistake():
 	print " ------------------------------------ "
 	print "|   ERROR,ESTA OPCION NO ES VALIDA   |"
+	print " ------------------------------------ "
+
+def linea():
 	print " ------------------------------------ "
 
 def Bienvenido():
