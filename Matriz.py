@@ -6,15 +6,15 @@ class Matriz():
 		self.x=0
 		self.y=0
 	def crear(self,x,y):
-		self.x=x
-		self.y=y
+		self.x=int(x)
+		self.y=int(y)
 		rolX=0
 		rolY=0
 		superior=None
 		tmp=None
 		preview=None
-		while rolY<y:
-			while rolX<x:
+		while rolY<int(y):
+			while rolX<int(x):
 				if rolY==0: 
 					if rolX==0:
 						self.raiz=NodoMatriz()

@@ -8,7 +8,7 @@ from listado_menu import *
 from parseXML import parser
 
 usuario = usuario()
-
+sesion_usuario=None
 
 print "Practica 1 EDD"
 valor= True
@@ -37,17 +37,24 @@ while valor:
 		if sesion_usuario!=None:
 			os.system("clear")
 			while menu_2==True:
-				menu=menu2(sesion_usuario.usuario)
+				menu=menu2(str(sesion_usuario.usuario))
 				opcion = raw_input()
 				os.system("clear")
 				if opcion=="1":
 					menu=menu2_opcion1()
 					ruta = raw_input()
-					sesion_usuario = parser(ruta,sesion_usuario)
+					sesion_usuario=parser(ruta,sesion_usuario)
 				elif opcion=="2":
+					if sesion_usuario.mat==None:
+						print "por favor cargue primero el archivo xml"
+					else:
+						print "exitoo"
 					print"dos"
 				elif opcion=="3":
-					print"tres"
+					if sesion_usuario.mat==None:
+						print "por favor cargue primero el archivo xml"
+					else:
+						print "exitoo"
 				elif opcion=="4":
 					usuario.imprime_usuarios()
 					print"cuatro"

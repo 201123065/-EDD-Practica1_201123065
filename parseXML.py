@@ -1,11 +1,32 @@
-import xml.etree.ElementTree as parse
-
+# import xml.etree.ElementTree as parse
+import os
+from xml.etree import ElementTree
+from Matriz import Matriz
+from cola import Cola
 def parser(cadena,user):
 	try:
-		root = parse.parse(cadena)
-		doc = root.getroot()
-		print doc.tag
-		print root.find('matriz/x').text
-		print root.find('matriz/y').text 
+		full_file =os.path.abspath(os.path.join(cadena))
+		dom = ElementTree.parse(full_file)
+		if user.mat==None:
+			ejex=dom.find('matriz/x').text
+			ejey=dom.find('matriz/y').text
+			matriz= Matriz()
+			matriz.crear(ejex,ejey)
+			user.mat=matriz
+		cola = Cola()
+		operacion = dom.findall('operaciones/operacion')
+		if user.cola ==None:
+			for op in operacion:
+				cola.queque(op.text)
+			user.cola=cola
+		else:
+			for op in operacion:
+				user.cola.queque(op.text)
+		print "sera?"
+		print user.cola.pcola()
+
+
 	except IOError:
 		print "este archivo no existe en esta carpeta"
+	
+	return user
