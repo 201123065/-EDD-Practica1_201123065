@@ -21,9 +21,13 @@ class Cola():
 			return None
 	def pcola(self):
 		punta=self.cabeza
-		while punta!=None:
-			print punta.operacion
-			punta=punta.siguiente
-			
+		val=0
+		if punta!=None:
+			while punta!=None:
+				print "operacion"+str(val)+":"+punta.operacion
+				punta=punta.siguiente
+				val=val+1
+		else:
+			print "la cola parece estar vacia"
 
 		

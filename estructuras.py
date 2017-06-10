@@ -138,9 +138,12 @@ while valor:
 				elif opcion=="4":
 					menu=lista_users()
 					usuario.imprime_usuarios()
-					print"cuatro"
 				elif opcion=="5":
-					sesion_usuario.cola.pcola()
+					if sesion_usuario.mat==None:
+						print "por favor cargue primero el archivo xml"
+					else:
+						os.system("clear")
+						sesion_usuario.cola.pcola()
 				elif opcion=="6":
 					menu_2=False
 					menu=close_session()
