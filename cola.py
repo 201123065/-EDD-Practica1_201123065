@@ -24,5 +24,6 @@ class Cola():
 		while punta!=None:
 			print punta.operacion
 			punta=punta.siguiente
+			
 
 		

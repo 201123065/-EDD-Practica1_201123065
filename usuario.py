@@ -59,6 +59,13 @@ class usuario():
 		der_a_izq=der_a_izq+"->"+temporal.izquierda.usuario
 		print izq_a_der +"\n"+der_a_izq
 
+	def imprimir_colas(self):
+		temporal=self.inicio
+		valor=0
+		while temporal!=None:
+			print "indice "+str(valor)+" :"+temporal.cola.operacion
+
+			pass
 
 
 

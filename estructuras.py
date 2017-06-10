@@ -11,6 +11,39 @@ from pila import Pila
 usuario = usuario()
 sesion_usuario=None
 
+def menu_matriz(usuario):
+	xance="1"
+	while xance!="5":
+		menu=menu3()
+		xance=raw_input()
+		if xance=="1":
+			menu=menu3_opcion1()
+			for x in range(0,usuario.mat.retornarX()):
+				for y in range(0,usuario.mat.retornarY()):
+					print "ingrese el dato para la casilla["+str(x+1)+","+str(y+1)+"]"
+					val=raw_input()
+					usuario.mat.cargar(x,y,val)
+		elif xance=="2":
+			for x in range(0,usuario.mat.retornarY()):
+				for y in range(0,usuario.mat.retornarX()):
+					celda= usuario.mat.ret_valor(x,y)
+					usuario.trans.cargar(x,y,celda)
+
+
+			print "transpuesta generada correctamente "
+
+		elif xance=="3":
+			usuario.mat.mostrarMat()
+		elif xance=="4":
+			usuario.trans.mostrarMat()
+		elif xance=="5":
+			print "regreso"
+		else:
+			print " esta no es una opcion valida"
+
+
+
+
 def postorden(cadena):
 	save=""
 	if cadena is not None:
@@ -100,12 +133,14 @@ while valor:
 					if sesion_usuario.mat==None:
 						print "por favor cargue primero el archivo xml"
 					else:
-						print "exitoo"
+						os.system("clear")
+						menu=menu_matriz(sesion_usuario)
 				elif opcion=="4":
+					menu=lista_users()
 					usuario.imprime_usuarios()
 					print"cuatro"
 				elif opcion=="5":
-					print"cinco"
+					sesion_usuario.cola.pcola()
 				elif opcion=="6":
 					menu_2=False
 					menu=close_session()
@@ -121,6 +156,8 @@ while valor:
 		break
 	else:
 		menu=mistake()
+
+
 
 
 

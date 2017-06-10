@@ -17,6 +17,11 @@ def menu1_opcion2():
 	print " ------------------------------------ "
 	print "ingrese el nombre del usuario:"
 
+def lista_users():
+	print " ------------------------------------ "
+	print "|        OPCION 4 : USUARIOS         |"
+	print " ------------------------------------ "
+
 def menu1_opcion1():
 	print " ------------------------------------ "
 	print "| OPCION 1: REGISTRAR NUEVO USUARIO  |"
@@ -47,6 +52,21 @@ def menu2_opcion2():
 	print " ------------------------------------ "
 	print"1. Operar siguiente"
 	print"2. Regresar"
+
+def menu3():
+	print " ------------------------------------ "
+	print "|      OPCION 3: CALCULO DE MATRIZ    |"
+	print " ------------------------------------ "
+	print "1. Ingresar dato"
+	print "2. Operar transpuesta"
+	print "3. Mostrar matriz original"
+	print "4. Mostrar matriz transpuesta"
+	print "5. Regresar"
+
+def menu3_opcion1():
+	print " ------------------------------------ "
+	print "| OPCION 1: CARGA DE DATOS A MATRIZ  |"
+	print " ------------------------------------ "
 
 def gracias():
 	print " ------------------------------------ "

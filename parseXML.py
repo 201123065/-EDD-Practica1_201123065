@@ -11,8 +11,12 @@ def parser(cadena,user):
 			ejex=dom.find('matriz/x').text
 			ejey=dom.find('matriz/y').text
 			matriz= Matriz()
-			matriz.crear(ejex,ejey)
+			matriz.crear(ejey,ejex)
 			user.mat=matriz
+			trans = Matriz()
+			trans.crear(ejex,ejey)
+			user.trans=trans
+
 		cola = Cola()
 		operacion = dom.findall('operaciones/operacion')
 		if user.cola ==None:
